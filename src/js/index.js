@@ -23,13 +23,13 @@ const personagens = document.querySelectorAll('.personagem');
 personagens.forEach((personagem) => {
     personagem.addEventListener('mouseenter', () => {
         personagem.classList.add('selecionado');
-        
-        if(window.innerWidth < 450) {
-            windows.scrollto({top: 0, behavior: 'amooth'});
+
+        if (window.innerWidth < 450) {
+            windows.scrollto({ top: 0, behavior: 'amooth' });
         }
 
         // passo 3 - verificar se já exista um personagem selecionado, se sim, devemos remover a seleção dele 
-        
+
         personagem.addEventListener('mouseout', () => {
             personagem.classList.remove('selecionado');
             const idPersonagem = personagem.attributes.id.value;
@@ -45,7 +45,7 @@ personagens.forEach((personagem) => {
         // passo 1 - pegar o elemento do personagem grande pra adicionar as informações nele
 
         const imagemPersonagemGrande = document.querySelector('.personagem-grande');
-        
+
         // passo 2 - alterar a imagem do personagem grande
         const idPersonagem = personagem.attributes.id.value;
         imagemPersonagemGrande.src = `./src/imagens/card-${idPersonagem}.png`;
