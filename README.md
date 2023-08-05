@@ -1,8 +1,7 @@
 # Projeto desenvolvido em live do zero ao programador
 
 ## Dev em dobro ou DEV QUEST
-## <img src="https://github.com/HumbertoFox/repository/assets/126817628/1803ecea-17e3-4e3f-9022-3c919f72a5fc" width="150px"/>
-https://devemdobro.com
+## <a href="https://devemdobro.com"><img src="https://github.com/HumbertoFox/repository/assets/126817628/1803ecea-17e3-4e3f-9022-3c919f72a5fc" width="150px"/></a>
 
 ## Sobre o projeto
 <p>O projeto foi desenvolvido em duas etapas ou duas lives, a primeira para montarmos os HTML e segunda o CSS e Js.</p>
