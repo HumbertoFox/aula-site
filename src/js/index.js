@@ -2,6 +2,7 @@ const personagens = document.querySelectorAll('.personagem');
 
 personagens.forEach((personagem) => {
     personagem.addEventListener('mouseenter', () => {
+
         const imagemPersonagemGrande = document.querySelector('.personagem-grande');
         const descricaoPersonagem = document.getElementById('descricao-personagem');
         const nomePersonagem = document.getElementById('nome-personagem');
@@ -18,10 +19,28 @@ personagens.forEach((personagem) => {
         descricaoPersonagem.innerText = personagem.getAttribute('data-description');
 
         personagem.addEventListener('mouseout', () => {
+
             personagem.classList.remove('selecionado');
-            imagemPersonagemGrande.src = `./src/imagens/logo.svg`;
-            document.getElementById('nome-personagem').innerText = "Nome do Personagem";
-            document.getElementById('descricao-personagem').innerText = "Descrição do Personagem"
+
         });
     });
+
+    personagem.addEventListener('click', () => {
+
+        desativandoPersonagem();
+
+        personagem.classList.add('ativado');
+
+    });
+
+    function desativandoPersonagem() {
+
+        const personagemAtivado =  document.querySelector('.personagem.ativado');
+        
+        if (personagemAtivado === null){
+            return;
+        } else {
+            personagemAtivado.classList.remove('ativado');
+        };
+    };
 });

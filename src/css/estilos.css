@@ -64,7 +64,7 @@ body::before {
     box-shadow: 0px 0px 24px 5px #0271F7;
 }
 
-.lista-de-personagens .personagem.selecionado.ativado {
+.lista-de-personagens .personagem.ativado {
     box-shadow: 0px 0px 24px 5px #F70002;
 }
 
