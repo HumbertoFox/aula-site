@@ -7,7 +7,7 @@ personagens.forEach((personagem) => {
         const descricaoPersonagem = document.getElementById('descricao-personagem');
         const nomePersonagem = document.getElementById('nome-personagem');
         const idPersonagem = personagem.attributes.id.value;
-        
+
         personagem.classList.add('selecionado');
 
         if (window.innerWidth < 450) {
@@ -21,6 +21,17 @@ personagens.forEach((personagem) => {
         personagem.addEventListener('mouseout', () => {
 
             personagem.classList.remove('selecionado');
+
+            personagens.forEach((personagemAtivado) => {
+                if (personagemAtivado.classList.value.includes('ativado')) {
+                    const idPersonagemAtivado = personagemAtivado.attributes.id.value;
+                    
+                    imagemPersonagemGrande.src = `./src/imagens/card-${idPersonagemAtivado}.png`;
+                    nomePersonagem.innerText = personagemAtivado.getAttribute('data-name');
+                    descricaoPersonagem.innerText = personagemAtivado.getAttribute('data-description');
+                };
+            });
+
 
         });
     });
